@@ -1,0 +1,131 @@
+/* style for event page */
+.featured_events{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow:wrap ;
+    padding: 0px 10% 0px 10%;
+    /* gap: 5%; */
+}
+.card_wrapper {
+    flex: 40%;        
+    box-sizing: border-box;
+    padding: 20px;
+    min-width: 30%;
+    width: 30%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+/* style for card */
+
+.card {
+    /* margin-top: 5%; */
+    display: flex;
+    text-align: justify;
+    width: auto;
+    min-height: auto;
+    background: rgb(238, 90, 70);
+}
+
+.card_head {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 70vh;
+    justify-content: start;
+    background: rgb(255, 221, 162);
+    transform: translateX(15px) translateY(-15px);
+}
+
+
+.card_description p{
+    display: flex;
+    margin-bottom: 9%;
+    padding:0px 10px 0px 10px;
+}
+.card_content{
+    align-self: start;
+    justify-self: start;
+}
+.card_content .content_front .media img {
+    width: 100%;
+}
+
+
+.card .button {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: rgb(238, 90, 70) solid 2px;
+    border-radius: 60%;
+    color: rgb(238, 90, 70);
+    font-size: x-large;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.card .button .span {
+    transition: transform ease-in;
+    transition-duration: 500ms;
+}
+
+.rotate_45 {
+    transform: rotate(45deg);
+    transition: transform ease-in;
+}
+
+.content_front,
+.content_back {
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.content_in {
+    overflow: hidden;
+    animation-name: fade_in;
+}
+
+.content_out {
+    overflow: hidden;
+    animation-name: fade_out;
+}
+
+@keyframes fade_out {
+    0% {
+        display: block;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.display_none {
+    display: none;
+}
